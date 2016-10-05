@@ -52,3 +52,5 @@ gem 'autoprefixer-rails'
 
 # NOTE: The sass-rails gem is included with new Rails applications by default.
 #       Please make sure that it is not already in your Gemfile before uncommenting it.
+
+gem "haml-rails", "~> 0.9"
