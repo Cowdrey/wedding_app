@@ -2,12 +2,11 @@
 lock '3.6.1'
 
 set :application, 'wedding_app'
-# set :repo_url, 'https://github.com/Cowdrey/wedding_app.git'
+set :repo_url, 'https://github.com/Cowdrey/wedding_app.git'
 set :repository, "."
 set :user, "thecowdr"
-set :domain, "thecowdreys.com"
 set :use_sudo, false
-
+set :rails_env, 'production'
 # Default branch is :master
 set :branch, "master"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -20,20 +19,17 @@ set :scm, :git
 
 # Checkout, compress and send a local copy
 set :deploy_via, :copy
-set :deploy_to, "/home/#{user}/rails_apps/#{application}"
+set :deploy_to, "/home/thecowdr/rails_apps/wedding_app"
 
-# We have all components of the app on the same server
-server domain, :app, :web, :db, :primary => true
-
-namespace :deploy do
-  task :start do ; end
-  task :stop do ; end
-
-  # Touch tmp/restart.txt to tell Phusion Passenger about new version
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "touch #{File.join(current_path, 'tmp', 'restart.txt')}"
-  end
-end
+# namespace :deploy do
+#   task :start do ; end
+#   task :stop do ; end
+#
+#   # Touch tmp/restart.txt to tell Phusion Passenger about new version
+#   task :restart, :roles => :app, :except => { :no_release => true } do
+#     run "touch #{File.join(current_path, 'tmp', 'restart.txt')}"
+#   end
+# end
 
 # Clean-up old releases
 after "deploy:restart", "deploy:cleanup"
