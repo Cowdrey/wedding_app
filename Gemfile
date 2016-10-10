@@ -59,3 +59,5 @@ gem 'less-rails', '~> 2.7', '>= 2.7.1'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'jquery-easing-rails', '~> 0.0.2'
+
+ruby "2.3.1"
