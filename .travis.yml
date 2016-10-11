@@ -1,13 +1,15 @@
 language: ruby
 rvm:
- - 2.3.1
-# uncomment and edit the following line if your project needs to run something other than `rake`:
+- 2.3.1
 script: bundle exec rspec
 notifications:
   email:
-    #- cowdrey31088@gmail.com
-    #- whybothershaving@gmail.com@gmail.com
 services:
 - postgresql
 before_script:
-  - psql -c 'create database myapp_test;' -U postgres
+- psql -c 'create database myapp_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: bjZq+T4As8UdF8pz86iH1YCAIcX3wKyGV8PxEtE3Dh8r/KFi24P1ZSWO2LqLZGe3SMWDPHjbT1RFvbyd5lNQmNxYiodzhY4R5JQi2eeVPbj4lQK+Sj9UBxt8YPESLNmSSCNcs40uOelJM8pLvIi63eQXGlE0DXVB6VuK1FpW4LgCpS4yS7mIzh7uoTj84q1mKn4xjy4S1+IqDl0pxnV5A3cbIQDJTPyXM1UFals/NOe/stkPvmnFP+2tjaj566nB9KJ5CuvWyIiJS8BrVi6/xJkL6IBSvFCe8bNCKHMVpqC8raNMOOM+MEj9/cPUyO0FVUnVM1vjb1imUcaNJsdcxC5oOnajlXKrDLXl2WmCEgvSKdROs8clBmiw7QwsgREX0ztWWvzmsZd9IV+yyIMouggTFIX03JyOzrPkAHcTpKHtiQ4e9Kr25xfHIFKxIrJnUnfZE899wvfbZl6MpKp4hGAiHZgazi9N75/xYj4cH0YHwT8p7T96iGkL5/B+9QH0Ke1qSZLUskq/lefx+6stdXnazTheCdXmDY7/CDFQ0F2TohFN7j1b5lD3xJSnKHmjJyP4fox+mXQAtTUF7RWwXQafSlLoRSdMQwc1f3l9C6W6RE873FSoBvozKR3xNXIFz1YI8F2dhL2fVwEBhiuo14ZaH4CHs2/nJ+rLXxBfPFs=
+  app: thecowdreys
