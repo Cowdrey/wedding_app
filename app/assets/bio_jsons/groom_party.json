@@ -1,0 +1,14 @@
+{
+  "bios":[
+    {
+      "name":"Philip Read", 
+      "imageUrl":"/assets/phil.JPG",
+      "bioText":"Example Bio Text"
+    },
+    {
+      "name":"Philip Read 2",
+      "imageUrl":"/assets/phil.JPG",
+      "bioText":"Example Bio Text 2"
+    }
+  ]
+}
