@@ -1,0 +1,35 @@
+%h1 Listing attendees
+
+%table
+  %thead
+    %tr
+      %th Email
+      %th First name
+      %th Last name
+      %th All attendants
+      %th Party count
+      %th Rsvp
+      %th Is attending
+      %th Number attending
+      %th
+      %th
+      %th
+
+  %tbody
+    - @attendees.each do |attendee|
+      %tr
+        %td= attendee.email
+        %td= attendee.first_name
+        %td= attendee.last_name
+        %td= attendee.all_attendants
+        %td= attendee.party_count
+        %td= attendee.rsvp
+        %td= attendee.is_attending
+        %td= attendee.number_attending
+        %td= link_to 'Show', attendee
+        %td= link_to 'Edit', edit_attendee_path(attendee)
+        %td= link_to 'Destroy', attendee, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Attendee', new_attendee_path

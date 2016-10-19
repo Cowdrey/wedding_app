@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Email:
+  = @attendee.email
+%p
+  %b First name:
+  = @attendee.first_name
+%p
+  %b Last name:
+  = @attendee.last_name
+%p
+  %b All attendants:
+  = @attendee.all_attendants
+%p
+  %b Party count:
+  = @attendee.party_count
+%p
+  %b Rsvp:
+  = @attendee.rsvp
+%p
+  %b Is attending:
+  = @attendee.is_attending
+%p
+  %b Number attending:
+  = @attendee.number_attending
+
+= link_to 'Edit', edit_attendee_path(@attendee)
+\|
+= link_to 'Back', attendees_path
