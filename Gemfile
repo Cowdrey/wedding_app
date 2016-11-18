@@ -49,6 +49,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :jruby]
 
 gem 'bootstrap-sass', '~> 3.3.7'
+gem 'jquery-datatables-rails', '~> 3.4.0'
 gem 'autoprefixer-rails'
 
 # NOTE: The sass-rails gem is included with new Rails applications by default.
