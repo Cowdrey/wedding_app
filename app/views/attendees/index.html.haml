@@ -1,0 +1,44 @@
+%div.container-fluid
+  %h1 Listing attendees
+%div.container-fluid
+  %table.table.table-striped.table-bordered.datatable
+    %thead
+      %tr
+        %th Email
+        %th First name
+        %th Last name
+        %th All attendants
+        %th Party count
+        %th Rsvp
+        %th Is attending
+        %th Number attending
+        %th Details
+        %th Edit
+        %th Delete
+
+    %tbody
+      - @attendees.each do |attendee|
+        %tr
+          %td= attendee.email
+          %td= attendee.first_name
+          %td= attendee.last_name
+          %td= attendee.all_attendants
+          %td= attendee.party_count
+          %td= attendee.rsvp
+          %td= attendee.is_attending
+          %td= attendee.number_attending
+
+          %td
+            = link_to attendee, class: "btn btn-default" do
+              %i.glyphicon.glyphicon-search
+          %td
+            = link_to edit_attendee_path(attendee), class: "btn btn-default" do
+              %i.glyphicon.glyphicon-pencil.text-primary
+          %td
+            = link_to attendee, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-default" do
+              %i.glyphicon.glyphicon-remove.text-danger
+  %br
+
+  = link_to new_attendee_path, class: "btn btn-default" do
+    %i.glyphicon.glyphicon-plus.text-success
+    Add Attendee

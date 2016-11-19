@@ -9,6 +9,7 @@ gem 'pg'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
+gem 'sprockets', '3.6.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -33,6 +34,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
 end
 
 
@@ -49,6 +51,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :jruby]
 
 gem 'bootstrap-sass', '~> 3.3.7'
+gem 'jquery-datatables-rails', '~> 3.4.0'
 gem 'autoprefixer-rails'
 
 # NOTE: The sass-rails gem is included with new Rails applications by default.
