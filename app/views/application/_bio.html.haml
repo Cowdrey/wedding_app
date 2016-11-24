@@ -1,8 +1,16 @@
-%br
-.container
-  %h4= name
-  .row
-    .col-sm-4
-      %img{:src => image_url, :class => "img-rounded pull-xs-left", :alt => "Responsive image", :width => "100%"}
-    .col-sm-8
-      %p= bio_text
+.col-lg-2.col-sm-2.no-padding
+  %a.portfolio-box{:href => image_url}
+    %img.img-responsive{:alt => "", :src => image_url}/
+    .portfolio-box-caption
+      .portfolio-box-caption-content
+        .project-category.text-faded= name
+        .project-name= bio_text
+-#       .col-lg-2.col-sm-2
+-#         %a.portfolio-box{:href => "assets/jesse.jpeg"}
+-#           %img.img-responsive{:alt => "", :src => "assets/jesse.jpeg"}/
+-#           .portfolio-box-caption
+-#             .portfolio-box-caption-content
+-#               .project-category.text-faded
+-#                 Category
+-#               .project-name
+-#                 Project Name

@@ -1,16 +1,18 @@
-%section#bios
-.container
-.row
-.col-lg-12.text-center
-  %h2.section-heading Wedding Party Bios
-  %hr.primary/
-.container
-.row
-.col-lg-12.text-center
-  %h3 Bride's Party
-  - @bridePartyBios.each do |bioProfile|
-    = render :partial => 'bio', locals: { name: bioProfile.name, image_url: bioProfile.imageUrl, bio_text: bioProfile.bioText }
-.col-lg-12.text-center
-  %h3 Groom's Party
-  - @groomPartyBios.each do |bioProfile|
-    = render :partial => 'bio', locals: { name: bioProfile.name, image_url: bioProfile.imageUrl, bio_text: bioProfile.bioText }
+%section#bios.reduce-padding
+  .container-fluid
+    .row.no-gutter.popup-gallery.fancy-font
+      .text-center
+        %h2.section-heading Wedding Party Bios
+        %hr.primary/
+      .text-center.col-lg-12.col-sm-12
+        %h3 Bride's Party
+        .text-center.col-lg-1.col-sm-1
+        - @bridePartyBios.each do |bioProfile|
+          = render :partial => 'bio', locals: { name: bioProfile.name, image_url: bioProfile.imageUrl, bio_text: bioProfile.bioText }
+        .text-center.col-lg-1.col-sm-1
+      .text-center.col-lg-12.col-sm-12
+        %h3 Groom's Party
+        .text-center.col-lg-1.col-sm-1
+        - @groomPartyBios.each do |bioProfile|
+          = render :partial => 'bio', locals: { name: bioProfile.name, image_url: bioProfile.imageUrl, bio_text: bioProfile.bioText }
+        .text-center.col-lg-1.col-sm-1

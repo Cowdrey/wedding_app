@@ -1,14 +1,29 @@
 {
   "bios":[
     {
-      "name":"Raphael", 
-      "imageUrl":"/assets/ninja-turtle.jpg",
-      "bioText":"I Like Pizza"
+      "name":"Jesse Kennedy",
+      "imageUrl":"/assets/jesse.jpeg",
+      "bioText":"Best Man"
     },
     {
-      "name":"Raphael 2", 
-      "imageUrl":"/assets/ninja-turtle.jpg",
-      "bioText":"I Like Pizza 2"
+      "name":"Philip Read 2",
+      "imageUrl":"/assets/phil.JPG",
+      "bioText":"Groomsman"
+    },
+    {
+      "name":"Jesse Kennedy",
+      "imageUrl":"/assets/jesse.jpeg",
+      "bioText":"Groomsman"
+    },
+    {
+      "name":"Philip Read 2",
+      "imageUrl":"/assets/phil.JPG",
+      "bioText":"Example Bio Text 2"
+    },
+    {
+      "name":"Jesse Kennedy",
+      "imageUrl":"/assets/jesse.jpeg",
+      "bioText":"Groomsman "
     }
   ]
 }
