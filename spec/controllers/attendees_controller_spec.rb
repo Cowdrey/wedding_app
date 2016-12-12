@@ -54,9 +54,14 @@ RSpec.describe AttendeesController, type: :controller do
   # in order to pass any filters (e.g. authentication) defined in
   # AttendeesController. Be sure to keep this updated too.
   let(:valid_session) { {} }
-
+  before(:example) do
+    @request.env['devise.mapping'] = Devise.mappings[:attendees]
+    sign_in FactoryGirl.create(:user)
+  end
   describe "GET #index" do
-    it "assigns all attendees as @attendees" do
+    # Use the sign_in helper to sign in a fixture `User` record.
+
+    it "assigns all attendees as @attendees", :focus => true do
       attendee = Attendee.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(assigns(:attendees)).to eq([attendee])
