@@ -4,20 +4,21 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   class BioProfile
-    def initialize(name, imageUrl, bioText)
+    def initialize(name, imageUrl, bioTitle, bioText)
       @name = name
       @imageUrl = imageUrl
+      @bioTitle = bioTitle
       @bioText = bioText
     end
 
-    attr_reader :name, :imageUrl, :bioText
+    attr_reader :name, :imageUrl, :bioTitle, :bioText
   end
-  
+
   def get_bios_from_JSON(filePath)
     biosJSON = JSON.parse(File.read(filePath))
     biosList = Array.new
     biosJSON["bios"].each { |bio|
-      biosList.push(BioProfile.new(bio["name"], bio["imageUrl"], bio["bioText"]))
+      biosList.push(BioProfile.new(bio["name"], bio["imageUrl"], bio["bioTitle"], bio["bioText"]))
     }
     biosList
   end

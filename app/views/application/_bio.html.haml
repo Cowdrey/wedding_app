@@ -4,7 +4,8 @@
     .portfolio-box-caption
       .portfolio-box-caption-content
         .project-category.text-faded= name
-        .project-name= bio_text
+        .project-name= bio_title
+        .project-text= simple_format(bio_text)
 -#       .col-lg-2.col-sm-2
 -#         %a.portfolio-box{:href => "assets/jesse.jpeg"}
 -#           %img.img-responsive{:alt => "", :src => "assets/jesse.jpeg"}/

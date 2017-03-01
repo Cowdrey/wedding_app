@@ -3,27 +3,32 @@
     {
       "name":"Jesse Kennedy",
       "imageUrl":"/assets/jesse.jpeg",
-      "bioText":"Best Man"
+      "bioTitle":"Best Man",
+      "bioText":""
     },
     {
-      "name":"Philip Read 2",
-      "imageUrl":"/assets/phil.JPG",
-      "bioText":"Groomsman"
+      "name":"Philip Read",
+      "imageUrl":"/assets/philip.png",
+      "bioTitle":"Groomsman",
+      "bioText":""
     },
     {
-      "name":"Jesse Kennedy",
-      "imageUrl":"/assets/jesse.jpeg",
-      "bioText":"Groomsman"
+      "name":"Levi Vandusen",
+      "imageUrl":"/assets/levi.png",
+      "bioTitle":"Groomsman",
+      "bioText":""
     },
     {
-      "name":"Philip Read 2",
-      "imageUrl":"/assets/phil.JPG",
-      "bioText":"Groomsman"
+      "name":"Mackenzie Kettler",
+      "imageUrl":"/assets/mac.png",
+      "bioTitle":"Groomsman",
+      "bioText":""
     },
     {
-      "name":"Jesse Kennedy",
-      "imageUrl":"/assets/jesse.jpeg",
-      "bioText":"Groomsman"
+      "name":"Jake Geither",
+      "imageUrl":"/assets/jake.png",
+      "bioTitle":"Groomsman",
+      "bioText":""
     }
   ]
 }

@@ -155,9 +155,11 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: asset-data-url('header.jpg');
+  background-image: asset-data-url('header.png');
   text-align: center;
   color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  font-family: 'Unica One', cursive;
 }
 header .header-content {
   position: relative;

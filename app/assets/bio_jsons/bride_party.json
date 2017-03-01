@@ -1,29 +1,34 @@
 {
   "bios":[
     {
-      "name":"Jesse Kennedy",
-      "imageUrl":"/assets/jesse.jpeg",
-      "bioText":"Best Man"
+      "name":"Katie Graham",
+      "imageUrl":"/assets/katie.png",
+      "bioTitle":"Maid of Honor",
+      "bioText":""
     },
     {
-      "name":"Philip Read 2",
-      "imageUrl":"/assets/phil.JPG",
-      "bioText":"Groomsman"
+      "name":"Rebekah Read",
+      "imageUrl":"/assets/reb.jpg",
+      "bioTitle":"Matron of Honor",
+      "bioText":""
     },
     {
-      "name":"Jesse Kennedy",
-      "imageUrl":"/assets/jesse.jpeg",
-      "bioText":"Groomsman"
+      "name":"Liz Davis",
+      "imageUrl":"/assets/liz.png",
+      "bioTitle":"Bridesmaid",
+      "bioText":""
     },
     {
-      "name":"Philip Read 2",
-      "imageUrl":"/assets/phil.JPG",
-      "bioText":"Example Bio Text 2"
+      "name":"Jennifer Mancini",
+      "imageUrl":"/assets/jen.jpg",
+      "bioTitle":"Bridesmaid",
+      "bioText":""
     },
     {
-      "name":"Jesse Kennedy",
-      "imageUrl":"/assets/jesse.jpeg",
-      "bioText":"Groomsman "
+      "name":"Jessica Austin",
+      "imageUrl":"/assets/jess.jpg",
+      "bioTitle":"Bridesmaid",
+      "bioText":""
     }
   ]
 }
