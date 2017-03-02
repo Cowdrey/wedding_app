@@ -1,20 +1,23 @@
-section#info {
+section#registry {
   position: relative;
   width: 100%;
   min-height: auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background: asset-data-url('arterra-event-gallery-outside.jpeg');
+  background: asset-data-url('sunset.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   -o-background-size: cover;
   background-position: center;
   text-align: center;
   color: white;
-
 }
-.opaque-white-rounded {
+.opaque-white {
   background: rgba(255,255,255,0.6);
-  padding: 40px;
-  border-radius: 25px;
+}
+.full-width{
+  width: 100% !important;
+}
+.no-max-width {
+    max-width: none;
 }
