@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
@@ -42,7 +41,6 @@ group :development, :test do
   gem 'faker', '~> 1.6', '>= 1.6.3'
 end
 
-
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
@@ -62,10 +60,10 @@ gem 'autoprefixer-rails'
 # NOTE: The sass-rails gem is included with new Rails applications by default.
 #       Please make sure that it is not already in your Gemfile before uncommenting it.
 
-gem "haml-rails", "~> 0.9"
+gem 'haml-rails', '~> 0.9'
 gem 'less-rails', '~> 2.7', '>= 2.7.1'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'jquery-easing-rails', '~> 0.0.2'
 
-ruby "2.3.1"
+ruby '2.3.1'

@@ -16,10 +16,10 @@ class ApplicationController < ActionController::Base
 
   def get_bios_from_JSON(filePath)
     biosJSON = JSON.parse(File.read(filePath))
-    biosList = Array.new
-    biosJSON["bios"].each { |bio|
-      biosList.push(BioProfile.new(bio["name"], bio["imageUrl"], bio["bioTitle"], bio["bioText"]))
-    }
+    biosList = []
+    biosJSON['bios'].each do |bio|
+      biosList.push(BioProfile.new(bio['name'], bio['imageUrl'], bio['bioTitle'], bio['bioText']))
+    end
     biosList
   end
 
@@ -31,6 +31,6 @@ class ApplicationController < ActionController::Base
   end
 
   def index
-    render "application/index"
+    render 'application/index'
   end
 end

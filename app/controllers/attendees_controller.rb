@@ -63,13 +63,14 @@ class AttendeesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_attendee
-      @attendee = Attendee.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def attendee_params
-      params.require(:attendee).permit(:email, :first_name, :last_name, :all_attendants, :party_count, :rsvp, :is_attending, :number_attending)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_attendee
+    @attendee = Attendee.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def attendee_params
+    params.require(:attendee).permit(:email, :first_name, :last_name, :all_attendants, :party_count, :rsvp, :is_attending, :number_attending)
+  end
 end

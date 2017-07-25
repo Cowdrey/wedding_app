@@ -24,31 +24,31 @@ RSpec.describe AttendeesController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # Attendee. As you add validations to Attendee, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
+  let(:valid_attributes) do
     {
-      :email => "MyText0",
-      :first_name => "MyText1",
-      :last_name => "MyText2",
-      :all_attendants => "MyText3",
-      :party_count => 2,
-      :rsvp => false,
-      :is_attending => true,
-      :number_attending => 1
+      email: 'MyText0',
+      first_name: 'MyText1',
+      last_name: 'MyText2',
+      all_attendants: 'MyText3',
+      party_count: 2,
+      rsvp: false,
+      is_attending: true,
+      number_attending: 1
     }
-  }
+  end
 
-  let(:invalid_attributes) {
+  let(:invalid_attributes) do
     {
-      :email => 4,
-      :first_name => 6,
-      :last_name => true,
-      :all_attendants => "MyText3",
-      :party_count => 'yolo',
-      :rsvp => 5,
-      :is_attending => 4,
-      :number_attending => 'swag'
+      email: 4,
+      first_name: 6,
+      last_name: true,
+      all_attendants: 'MyText3',
+      party_count: 'yolo',
+      rsvp: 5,
+      is_attending: 4,
+      number_attending: 'swag'
     }
-  }
+  end
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -58,90 +58,90 @@ RSpec.describe AttendeesController, type: :controller do
     @request.env['devise.mapping'] = Devise.mappings[:attendees]
     sign_in FactoryGirl.create(:user)
   end
-  describe "GET #index" do
+  describe 'GET #index' do
     # Use the sign_in helper to sign in a fixture `User` record.
 
-    it "assigns all attendees as @attendees", :focus => true do
+    it 'assigns all attendees as @attendees', focus: true do
       attendee = Attendee.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(assigns(:attendees)).to eq([attendee])
     end
   end
 
-  describe "GET #show" do
-    it "assigns the requested attendee as @attendee" do
+  describe 'GET #show' do
+    it 'assigns the requested attendee as @attendee' do
       attendee = Attendee.create! valid_attributes
-      get :show, params: {id: attendee.to_param}, session: valid_session
+      get :show, params: { id: attendee.to_param }, session: valid_session
       expect(assigns(:attendee)).to eq(attendee)
     end
   end
 
-  describe "GET #new" do
-    it "assigns a new attendee as @attendee" do
+  describe 'GET #new' do
+    it 'assigns a new attendee as @attendee' do
       get :new, params: {}, session: valid_session
       expect(assigns(:attendee)).to be_a_new(Attendee)
     end
   end
 
-  describe "GET #edit" do
-    it "assigns the requested attendee as @attendee" do
+  describe 'GET #edit' do
+    it 'assigns the requested attendee as @attendee' do
       attendee = Attendee.create! valid_attributes
-      get :edit, params: {id: attendee.to_param}, session: valid_session
+      get :edit, params: { id: attendee.to_param }, session: valid_session
       expect(assigns(:attendee)).to eq(attendee)
     end
   end
 
-  describe "POST #create" do
-    context "with valid params" do
-      it "creates a new Attendee" do
-        expect {
-          post :create, params: {attendee: valid_attributes}, session: valid_session
-        }.to change(Attendee, :count).by(1)
+  describe 'POST #create' do
+    context 'with valid params' do
+      it 'creates a new Attendee' do
+        expect do
+          post :create, params: { attendee: valid_attributes }, session: valid_session
+        end.to change(Attendee, :count).by(1)
       end
 
-      it "assigns a newly created attendee as @attendee" do
-        post :create, params: {attendee: valid_attributes}, session: valid_session
+      it 'assigns a newly created attendee as @attendee' do
+        post :create, params: { attendee: valid_attributes }, session: valid_session
         expect(assigns(:attendee)).to be_a(Attendee)
         expect(assigns(:attendee)).to be_persisted
       end
 
-      it "redirects to the created attendee" do
-        post :create, params: {attendee: valid_attributes}, session: valid_session
+      it 'redirects to the created attendee' do
+        post :create, params: { attendee: valid_attributes }, session: valid_session
         expect(response).to redirect_to(Attendee.last)
       end
     end
 
-    context "with invalid params" do
-      it "assigns a newly created but unsaved attendee as @attendee" do
-        post :create, params: {attendee: invalid_attributes}, session: valid_session
+    context 'with invalid params' do
+      it 'assigns a newly created but unsaved attendee as @attendee' do
+        post :create, params: { attendee: invalid_attributes }, session: valid_session
         expect(assigns(:attendee)).to be_a_new(Attendee)
       end
 
       it "re-renders the 'new' template" do
-        post :create, params: {attendee: invalid_attributes}, session: valid_session
-        expect(response).to render_template("new")
+        post :create, params: { attendee: invalid_attributes }, session: valid_session
+        expect(response).to render_template('new')
       end
     end
   end
 
-  describe "PUT #update" do
-    context "with valid params" do
-      let(:new_attributes) {
+  describe 'PUT #update' do
+    context 'with valid params' do
+      let(:new_attributes) do
         {
-          :email => "newMyText0",
-          :first_name => "newMyText1",
-          :last_name => "newMyText2",
-          :all_attendants => "newMyText3",
-          :party_count => 3,
-          :rsvp => true,
-          :is_attending => false,
-          :number_attending => 2
+          email: 'newMyText0',
+          first_name: 'newMyText1',
+          last_name: 'newMyText2',
+          all_attendants: 'newMyText3',
+          party_count: 3,
+          rsvp: true,
+          is_attending: false,
+          number_attending: 2
         }
-      }
+      end
 
-      it "updates the requested attendee" do
+      it 'updates the requested attendee' do
         attendee = Attendee.create! valid_attributes
-        put :update, params: {id: attendee.to_param, attendee: new_attributes}, session: valid_session
+        put :update, params: { id: attendee.to_param, attendee: new_attributes }, session: valid_session
         attendee.reload
 
         expect(attendee.email).to eq(new_attributes[:email])
@@ -154,45 +154,45 @@ RSpec.describe AttendeesController, type: :controller do
         expect(attendee.number_attending).to eq(new_attributes[:number_attending])
       end
 
-      it "assigns the requested attendee as @attendee" do
+      it 'assigns the requested attendee as @attendee' do
         attendee = Attendee.create! valid_attributes
-        put :update, params: {id: attendee.to_param, attendee: valid_attributes}, session: valid_session
+        put :update, params: { id: attendee.to_param, attendee: valid_attributes }, session: valid_session
         expect(assigns(:attendee)).to eq(attendee)
       end
 
-      it "redirects to the attendee" do
+      it 'redirects to the attendee' do
         attendee = Attendee.create! valid_attributes
-        put :update, params: {id: attendee.to_param, attendee: valid_attributes}, session: valid_session
+        put :update, params: { id: attendee.to_param, attendee: valid_attributes }, session: valid_session
         expect(response).to redirect_to(attendee)
       end
     end
 
-    context "with invalid params" do
-      it "assigns the attendee as @attendee" do
+    context 'with invalid params' do
+      it 'assigns the attendee as @attendee' do
         attendee = Attendee.create! valid_attributes
-        put :update, params: {id: attendee.to_param, attendee: invalid_attributes}, session: valid_session
+        put :update, params: { id: attendee.to_param, attendee: invalid_attributes }, session: valid_session
         expect(assigns(:attendee)).to eq(attendee)
       end
 
       it "re-renders the 'edit' template" do
         attendee = Attendee.create! valid_attributes
-        put :update, params: {id: attendee.to_param, attendee: invalid_attributes}, session: valid_session
-        expect(response).to render_template("edit")
+        put :update, params: { id: attendee.to_param, attendee: invalid_attributes }, session: valid_session
+        expect(response).to render_template('edit')
       end
     end
   end
 
-  describe "DELETE #destroy" do
-    it "destroys the requested attendee" do
+  describe 'DELETE #destroy' do
+    it 'destroys the requested attendee' do
       attendee = Attendee.create! valid_attributes
-      expect {
-        delete :destroy, params: {id: attendee.to_param}, session: valid_session
-      }.to change(Attendee, :count).by(-1)
+      expect do
+        delete :destroy, params: { id: attendee.to_param }, session: valid_session
+      end.to change(Attendee, :count).by(-1)
     end
 
-    it "redirects to the attendees list" do
+    it 'redirects to the attendees list' do
       attendee = Attendee.create! valid_attributes
-      delete :destroy, params: {id: attendee.to_param}, session: valid_session
+      delete :destroy, params: { id: attendee.to_param }, session: valid_session
       expect(response).to redirect_to(attendees_url)
     end
   end
